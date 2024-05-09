@@ -2,6 +2,9 @@ pipeline {
   agent {
     docker { image 'python:alpine3.19' }
   }
+  triggers {
+        pollSCM '* * * * *'
+  }
   stages {
     stage('Hello') {
       steps {
