@@ -1,4 +1,4 @@
-npipeline {
+pipeline {
   agent {
     docker { image 'devopsjourney1/myjenkinsagents:python' }
   }
