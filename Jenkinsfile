@@ -1,11 +1,14 @@
-pipeline {
+npipeline {
   agent {
     docker { image 'devopsjourney1/myjenkinsagents:python' }
   }
   stages {
     stage('Hello') {
       steps {
-        python3 hello.py
+        sh '''
+        python3 --version
+        hostname
+        '''
       }
     }
   }
