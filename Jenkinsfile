@@ -3,7 +3,6 @@ pipeline {
     docker {
       image 'python:alpine3.19'
     }
-
   }
   stages {
     stage('Hello') {
@@ -14,7 +13,7 @@ pipeline {
         '''
       }
     }
-    stage {
+    stage('Cleanup') {
       steps {
         sh '''
         docker rmi python
