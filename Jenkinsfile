@@ -1,23 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker { image 'python:slim' }
+  }
   stages {
-    stage('Stage-1') {
+    stage('Test') {
       steps {
-        echo 'Step-1'
+        python3 hello.py
       }
     }
-
-    stage('Stage-2') {
-      steps {
-        echo 'Step-2'
-      }
-    }
-
-    stage('Stage-3') {
-      steps {
-        echo 'Step-3'
-      }
-    }
-
   }
 }
