@@ -1,9 +1,9 @@
 pipeline {
   agent {
-    docker { image 'python:slim' }
+    docker { image 'python:3.13.0b1-slim-bullseye' }
   }
   stages {
-    stage('Test') {
+    stage('Hello') {
       steps {
         python3 hello.py
       }
