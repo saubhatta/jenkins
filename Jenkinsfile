@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'devopsjourney1/myjenkinsagents:python' }
+    docker { image 'python:alpine3.19' }
   }
   stages {
     stage('Hello') {
