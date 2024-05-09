@@ -13,6 +13,13 @@ pipeline {
         hostname
         '''
       }
+    stage {
+      steps {
+        sh '''
+        docker rmi python
+        '''
+      }
+    }
     }
 
   }
