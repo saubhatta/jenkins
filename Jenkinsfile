@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'python:3.13.0b1-slim-bullseye' }
+    docker { image 'devopsjourney1/myjenkinsagents:python' }
   }
   stages {
     stage('Hello') {
