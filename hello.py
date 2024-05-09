@@ -1,3 +1,3 @@
-print("Hello There!")
-print("Hello Again!")
-print("Hello Once More!")
+import socket
+print(socket.gethostname())
+print("Wassup Buddy!")
