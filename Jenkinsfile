@@ -8,6 +8,7 @@ pipeline {
         }
       }
       steps {
+        sh 'echo $BUILD_NUMBER'
         sh '''
         python3 hello.py
         hostname
