@@ -13,13 +13,6 @@ pipeline {
         '''
       }
     }
-    stage('Cleanup') {
-      steps {
-        sh '''
-        docker rmi python
-        '''
-      }
-    }
   }
   triggers {
     pollSCM('* * * * *')
